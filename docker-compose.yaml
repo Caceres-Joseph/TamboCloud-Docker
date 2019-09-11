@@ -1,0 +1,19 @@
+version: '2'
+services:
+  
+  proxy:
+    build: Proxy
+    ports:
+      - "8080:8080"
+    depends_on :
+      - static
+  static:
+    build: Nginx
+  flask:
+    build: Flask
+    depends_on:
+     - redis
+     - static
+  redis:
+    image: redis
+  
