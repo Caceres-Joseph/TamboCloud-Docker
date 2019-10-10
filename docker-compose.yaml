@@ -8,8 +8,7 @@ services:
   flask:
     build: Flask
     depends_on:
-     - redis
-     - static
+     - redis 
   redis:
     image: redis
   
