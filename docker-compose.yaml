@@ -4,9 +4,7 @@ services:
   proxy:
     build: Proxy
     ports:
-      - "80:80"
-    depends_on :
-      - static
+      - "80:80" 
   flask:
     build: Flask
     depends_on:
