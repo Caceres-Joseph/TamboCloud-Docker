@@ -7,8 +7,6 @@ services:
       - "80:80"
     depends_on :
       - static
-  static:
-    build: Nginx
   flask:
     build: Flask
     depends_on:
