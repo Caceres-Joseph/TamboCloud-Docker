@@ -9,7 +9,7 @@ docker build -t proxy:v1 .
 ## Run container
 
 ```
-docker run --rm -d -p 8080:80 proxy:v1 
+docker run --rm -d -p 80:80 proxy:v1 
 ```
 or
 ```

@@ -59,7 +59,7 @@ Provaides static files for example js files for boostrap, and css
 
 
 ## Proxy Server
-Reroute traffic to the Flask container and also to the static file server in the port 8080 
+Reroute traffic to the Flask container and also to the static file server in the port 80 
 
 ## Redis
 Redis (Remote Dictionary Server) is a Database with a Key-Value storage engine. In addition, the data resides mainly in memory, which gives this system very good response times in information retrieval.
@@ -67,13 +67,13 @@ Redis (Remote Dictionary Server) is a Database with a Key-Value storage engine. 
 
 ## Docker-compose 
 
-Proxy server is running in port 8080 
+Proxy server is running in port 80 
 
 ```
   proxy:
     build: Proxy
     ports:
-      - "8080:8080"
+      - "80:80"
     depends_on :
       - static
       - flask
