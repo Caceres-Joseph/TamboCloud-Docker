@@ -1,12 +1,9 @@
 version: '2'
-services:
-  
-  proxy:
-    build: Proxy
-    ports:
-      - "80:80" 
+services: 
   flask:
     build: Flask
+    ports:
+      - "80:80" 
     depends_on:
      - redis 
   redis:
